@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="'Başarılı Olmak Nobel Almak Değil, Ailenize, Ülkenize ve İnsanlığa Hizmet Etmektir.'" xml:space="preserve">
+    <value>'To Be Successful is Not to Get a Nobel, but to Serve Your Family, Your Country and Humanity.'</value>
+  </data>
+  <data name="'Devler Gibi Eserler Bırakmak İçin, Karıncalar Gibi Çalışmak Gerekir.'" xml:space="preserve">
+    <value>'In Order to Leave Works Like Giants, It Is Necessary to Work Like Ants.'</value>
+  </data>
+  <data name="'Herhangi Bir Şahsın, Yaşadıkça Memnun ve Mesut Olması İçin Lazım Gelen Şey, Kendisi İçin Değil, Kendisinden Sonra Gelecekler İçin Çalışmaktır. Hayatta Tam Zevk ve Saadet Ancak Gelecek Nesillerin Şerefi, Varlığı, Saadeti İçin Çalışmakta Bulunabilir.'" xml:space="preserve">
+    <value>'What Is Necessary For Any Person to Be Satisfied and Happy As Long As He Lives Is to Work Not For Himself, But For Those Who Will Come After Him. Full Pleasure and Happiness in Life Can Only Be Found in Working For the Honor, Existence and Happiness of Future Generations.'</value>
+  </data>
+  <data name="'Saygı İstiyorsanız, Önce Kendinize Saygı Göstereceksiniz. Herkesten Üstün Değiliz Ama Kimseden de Aşağı Değiliz. Kendimizle İftihar Edelim Ki Başkası da Bize Saygı Göstersin.'" xml:space="preserve">
+    <value>'If You Want Respect, You Will Respect Yourself First. We Are Not Superior To Anyone, But We Are Not Inferior to Anyone Either. Let us Be Proud Of Ourselves So That Someone Else Will Respect Us.'</value>
+  </data>
+  <data name="'Yalnız Tek Bir Şeye İhtiyacımız Vardır, Çalışkan Olmak. Servet ve Onun Tabii Neticesi Olan Refah ve Saadet Yalnız ve Ancak Çalışkanların Hakkıdır.'" xml:space="preserve">
+    <value>'We Only Need One Thing, To Be Hardworking. Wealth and Its Natural Consequence, Prosperity and Felicity, are the Rights of Only the Hard working.'</value>
+  </data>
+  <data name="'Çalışmaktan; Gayret Sarfından, Bir Cezadan, Bir Sıkıntıdan, Bir Fenalıktan Kaçar Gibi Kaçınmak, Çok Kötü ve Tedbirsizce Bir Harekettir.'" xml:space="preserve">
+    <value>'It is a Very Bad and Imprudent Act to Avoid Working; Effort, Punishment, Distress, Avoiding Evil As If One Were Fleeing.'</value>
+  </data>
+  <data name="'Çoğu İnsan Zekâya İnanır, Ben İnanmıyorum Bizi Birbirimizden Ayıran Emektir, Ben Çalışmaya İnanıyorum.'" xml:space="preserve">
+    <value>'Most People Believe in Intelligence, I Don't Believe It's Labor That Separates Us From Each Other, I Believe in Work.'</value>
+  </data>
+  <data name="+90 545 293 2911" xml:space="preserve">
+    <value>+90 545 293 2911</value>
+  </data>
+  <data name="2 Yıl Boyunca Freelancer Kazanç Sitelerinden Satışlar Yaptım. E-Ticaret Tasarımları Blog Tasarımları Reklamcılık vb. Genellikle Kullandığım Teknolojiler .Net, Angular, JavaScript." xml:space="preserve">
+    <value>I have Been Making Sales from Freelancer Earnings Sites for 2 Years. E-Commerce Designs Blog Designs Advertising etc. The Technologies I Usually Use are .NET, Angular, JavaScript.</value>
+  </data>
+  <data name="24 Yaşındayım ve Kütahya'da İkamet Ediyorum. Üniversite Yıllarımdan Beri .Net Alanında Kendimi Geliştiriyorum. Yazılıma Olan İlgim Çok Büyük, Kendime Yenilikler Katmak İçin Elimden Geldiğince Çabalıyorum. Esas Olarak .Net ve Angular Tarafında Projeler Geliştiriyorum. OpenLayers Kütüphanesi Hakkında Temel Bilgim Var. Okulun İnternet Sitesinde 3 Aydır .Net Stajım Var. OdakGİS Firmasında 10 Ay Yazılım Geliştirici Olarak Çalıştım. Ankara, İzmir ve Bursa İlleri İçin İkamet Sorunum Yok." xml:space="preserve">
+    <value>I am 24 Years Old and Reside in Kütahya. I have Been Developing Myself in the Field of .NET Since My College Years. My Interest in Software Is Very Great, I Try As Hard As I Can to Add Innovations to Myself. I Mainly Develop Projects on the .NET and Angular Side. I Have Basic Knowledge About the OpenLayers Library. I Have a .NET Internship on the School's Website for 3 Months. I Worked as a Software Developer at OdakGİS Company for 10 Months. I have No Residence Problems For the Provinces of Ankara, Izmir and Bursa.</value>
+  </data>
+  <data name="3 Ocak 1999" xml:space="preserve">
+    <value>3 January 1999</value>
+  </data>
+  <data name="3 Yıl" xml:space="preserve">
+    <value>3 Years</value>
+  </data>
+  <data name="Ad Soyad :" xml:space="preserve">
+    <value>Name Surname :</value>
+  </data>
+  <data name="Adres :" xml:space="preserve">
+    <value>Address :</value>
+  </data>
+  <data name="Adınız" xml:space="preserve">
+    <value>Your Name</value>
+  </data>
+  <data name="Alparslan Akbaş" xml:space="preserve">
+    <value>Alparslan Akbas</value>
+  </data>
+  <data name="Alparslan Akbaş Web Developer" xml:space="preserve">
+    <value>Alparslan Akbas Web Developer</value>
+  </data>
+  <data name="Anasayfa" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Atatürk Anadolu Lisesi" xml:space="preserve">
+    <value>Ataturk Anadolu High school</value>
+  </data>
+  <data name="Ben" xml:space="preserve">
+    <value>I'm</value>
+  </data>
+  <data name="bybluestht@gmail.com" xml:space="preserve">
+    <value>bybluestht@gmail.com</value>
+  </data>
+  <data name="Cv İndir" xml:space="preserve">
+    <value>Download CV</value>
+  </data>
+  <data name="Deneyim :" xml:space="preserve">
+    <value>Experience :</value>
+  </data>
+  <data name="Deneyimlerim" xml:space="preserve">
+    <value>My Experience</value>
+  </data>
+  <data name="Denklik :" xml:space="preserve">
+    <value>Degree :</value>
+  </data>
+  <data name="Detaylar" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Domaniç İlkokulu/Ortaöğretim" xml:space="preserve">
+    <value>Domanic Primary School/Secondary School</value>
+  </data>
+  <data name="Domaniç, Kütahya, Türkiye" xml:space="preserve">
+    <value>Domanic, Kutahya, Turkey</value>
+  </data>
+  <data name="Doğum Tarihi :" xml:space="preserve">
+    <value>Date of Birth :</value>
+  </data>
+  <data name="Durum :" xml:space="preserve">
+    <value>Freelance :</value>
+  </data>
+  <data name="En Güncel Web Tasarım Şablonları İle Web Sitelerinizi Yeniden Tasarlamak veya Kişisel Zevkinize Özel Bir Tasarım Sunabiliyorum." xml:space="preserve">
+    <value>With the Most Up-to-Date Web Design Templates, I can Redesign Your Websites or Offer a Custom Design for Your Personal Taste.</value>
+  </data>
+  <data name="Eğitim ve Deneyim" xml:space="preserve">
+    <value>Education and Experience</value>
+  </data>
+  <data name="Eğitimlerim" xml:space="preserve">
+    <value>Educations</value>
+  </data>
+  <data name="Hakkımda" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Hakkında" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Hepsi" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Hizmetler" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Hizmetlerim" xml:space="preserve">
+    <value>My Services</value>
+  </data>
+  <data name="Konu" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Lise" xml:space="preserve">
+    <value>High school</value>
+  </data>
+  <data name="Mail :" xml:space="preserve">
+    <value>Email :</value>
+  </data>
+  <data name="Mail Adresiniz" xml:space="preserve">
+    <value>Your Email</value>
+  </data>
+  <data name="Mesaj Gönder" xml:space="preserve">
+    <value>Send Message</value>
+  </data>
+  <data name="Mesajınız" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Meslek Yüksekokul" xml:space="preserve">
+    <value>Vocational School</value>
+  </data>
+  <data name="Meslek Yüksekokulu" xml:space="preserve">
+    <value>Vocational School</value>
+  </data>
+  <data name="Mustafa Kemal Atatürk" xml:space="preserve">
+    <value>Mustafa Kemal Ataturk</value>
+  </data>
+  <data name="Necip Fazıl Kısakürek" xml:space="preserve">
+    <value>Necip Fazil Kisakurek</value>
+  </data>
+  <data name="OdakGIS (Kurumsal Kaynak Planlama yazılımı) ve OdakGIS (Web Service Security Gateway) Projelerinde Çalıştım. .Net (Mvc, Core), Angular ve Postgresql Veritabanı Gibi Teknolojileri Kullandım." xml:space="preserve">
+    <value>I worked on OdakGIS (Enterprise Resource Planning software) and OdakGIS (Web Service Security Gateway) Projects. I have Used Technologies such as .NET (Mvc, Core), Angular and Postgresql Database.</value>
+  </data>
+  <data name="Okunulabilir Kod Dizaynı İle Clean Codes Presibini Aratmayan, Performans Bazlı Kodlar İle Size Hizmet Etmekteyim." xml:space="preserve">
+    <value>I am Serving You With Performance-Based Codes That Do not Search for the Clean Codes Presib With a Readable Code Design.</value>
+  </data>
+  <data name="Profesör Doktor" xml:space="preserve">
+    <value>Professor Doctor</value>
+  </data>
+  <data name="Projeler" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="Projelerim" xml:space="preserve">
+    <value>My Projects</value>
+  </data>
+  <data name="SEO" xml:space="preserve">
+    <value>SEO</value>
+  </data>
+  <data name="Serbest" xml:space="preserve">
+    <value>Freelancer</value>
+  </data>
+  <data name="Stajyer" xml:space="preserve">
+    <value>Intern</value>
+  </data>
+  <data name="Sözler" xml:space="preserve">
+    <value>Words</value>
+  </data>
+  <data name="Telefon :" xml:space="preserve">
+    <value>Phone :</value>
+  </data>
+  <data name="Türkiye Cumhuriyet Kurucusu" xml:space="preserve">
+    <value>Founder of the Republic of Turkey</value>
+  </data>
+  <data name="Uzun Zamandır Bireysel ve Kurumsal Firmalar İçin Serbest (freelance) Web Siteleriniz İçin SEO Hizmeti Vermekteyim." xml:space="preserve">
+    <value>I have Been Providing SEO Services For Your Freelance Websites For Individual and Corporate Companies for a Long Time.</value>
+  </data>
+  <data name="Web Kodlama" xml:space="preserve">
+    <value>Web Development</value>
+  </data>
+  <data name="Web Tasarım" xml:space="preserve">
+    <value>Web Design</value>
+  </data>
+  <data name="Yetenekler" xml:space="preserve">
+    <value>Skills</value>
+  </data>
+  <data name="Yeteneklerim" xml:space="preserve">
+    <value>My Skills</value>
+  </data>
+  <data name="Yüksek İhtisas Üniversitesi" xml:space="preserve">
+    <value>Yuksek Ihtisas Universty</value>
+  </data>
+  <data name="ÖZELLİKLER" xml:space="preserve">
+    <value>Quality</value>
+  </data>
+  <data name="Öğrenim Gördüğüm Üniversite'de Son Sınıf Ödev Olan Stajımı Geçirdim. Yaptığım İşler ve Öğrenimlerim Genellikle Veritaban ve Web Tarafındaydı. (Aspx ve MsSql)" xml:space="preserve">
+    <value>I Spent My Internship, Which was a Final Year Assignment, at the University where I Studied. My Work and Studies I Did were Usually on the Database and Web Site. (Aspx and MsSql)</value>
+  </data>
+  <data name="İletişim" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="İletişime Geç" xml:space="preserve">
+    <value>Contact Me</value>
+  </data>
+  <data name="İlköğretim" xml:space="preserve">
+    <value>Elementary</value>
+  </data>
+  <data name="Şair" xml:space="preserve">
+    <value>Poetrist</value>
+  </data>
+</root>

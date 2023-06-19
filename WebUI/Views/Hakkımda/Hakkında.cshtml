@@ -1,0 +1,574 @@
+﻿@{
+    Layout = null;
+}
+
+@{
+    var currentCulture = CultureInfo.CurrentCulture.Name;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>@localizer.GetKey("Alparslan Akbaş Web Developer").Value</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Alparslan Akbaş, Web Developer, .Net Developer" name="keywords">
+    <meta content="Web Developer" name="description">
+
+
+    <!-- Favicon -->
+    <link href="~/portfolyo/img/8983107.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/portfolyo/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/portfolyo/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/portfolyo/css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Başlangıcı -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a asp-route="Hakkında" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5"><span class="text-primary">Alparslan</span> Akbaş</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="#home" class="nav-item nav-link text-danger active">@localizer.GetKey("Anasayfa").Value</a>
+                <a href="#about" class="nav-item nav-link text-danger">@localizer.GetKey("Hakkımda").Value</a>
+                <a href="#qualification" class="nav-item nav-link text-danger">@localizer.GetKey("Eğitim ve Deneyim").Value</a>
+                <a href="#skill" class="nav-item nav-link text-danger">@localizer.GetKey("Yetenekler").Value</a>
+                <a href="#service" class="nav-item nav-link text-danger">@localizer.GetKey("Hizmetler").Value</a>
+                <a href="#portfolio" class="nav-item nav-link text-danger">@localizer.GetKey("Projelerim").Value</a>
+                <a href="#testimonial" class="nav-item nav-link text-danger">@localizer.GetKey("Sözler").Value</a>
+                <a href="#contact" class="nav-item nav-link text-danger">@localizer.GetKey("İletişim").Value</a>
+            </div>
+            <a href="#contact" class="btn btn-outline-primary d-none d-lg-block">@localizer.GetKey("İletişime Geç").Value</a>
+            <button class="btn btn-outline-info dropdown-toggle ml-3" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                @if (currentCulture == "tr-TR")
+                {
+                    <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/imgbin_flag-of-turkey-flag-of-the-republic-of-china-national-flag-png.png" alt="Türkçe" >
+                }
+                else if (currentCulture == "en-US")
+                {
+                    <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/imgbin_flag-of-england-flag-of-the-united-kingdom-english-flag-of-great-britain-png.png" alt="English">
+                }
+                else if (currentCulture == "de-DE")
+                {
+                    <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/favpng_flag-of-the-czech-republic-flag-of-croatia-flag-of-austria-flag-of-spain.png" alt="Deutsch">
+                }
+                else if (currentCulture == "fr-FR")
+                {
+                    <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/favpng_flag-of-france-flag-of-switzerland-flag-of-croatia.png" alt="Français">
+                }
+                else
+                {
+                    <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/default-flag.png" alt="Language">
+                }
+            </button>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
+                <a asp-controller="Hakkımda" asp-action="Lang" class="dropdown-item" asp-route-languageCode="tr-TR">
+                    <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/imgbin_flag-of-turkey-flag-of-the-republic-of-china-national-flag-png.png" alt="Türkçe"> Türkçe
+                </a>
+                <a asp-controller="Hakkımda" asp-action="Lang" class="dropdown-item" asp-route-languageCode="en-US">
+                    <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/imgbin_flag-of-england-flag-of-the-united-kingdom-english-flag-of-great-britain-png.png" alt="English"> English
+                </a>
+                <a asp-controller="Hakkımda" asp-action="Lang" class="dropdown-item disabled" asp-route-languageCode="de-DE">
+                    <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/favpng_flag-of-the-czech-republic-flag-of-croatia-flag-of-austria-flag-of-spain.png" alt="Deutsch"> Deutsch
+                </a>
+                <a asp-controller="Hakkımda" asp-action="Lang" class="dropdown-item disabled" asp-route-languageCode="fr-FR">
+                    <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/favpng_flag-of-france-flag-of-switzerland-flag-of-croatia.png" alt="Français"> Français
+                </a>
+            </div>
+
+            </div>
+
+    </nav>
+    <!-- Navbar Bitişi -->
+    <!-- Header Başlangıcı -->
+    <div class="container-fluid bg-info d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="~/portfolyo/img/33991.jpg" alt="">
+                </div>
+                <div class="col-lg-7 text-center text-lg-left">
+                    <h3 class="text-white font-weight-normal mb-3">@localizer.GetKey("Ben").Value</h3>
+                    <h1 class="display-4 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Alparslan Akbaş</h1>
+                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                    <div class="typed-text d-none">Software Developer, .Net Developer, Web Developer</div>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                        <a onclick="downloadCv()" class="btn btn-outline-light mr-5">@localizer.GetKey("Cv İndir").Value</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Bitişi -->
+    <!-- Hakkımda Başlangıcı -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #666666;">@localizer.GetKey("Hakkında").Value</h1>
+                <h1 class="position-absolute text-uppercase text-primary">@localizer.GetKey("Hakkımda").Value</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100" src="~/portfolyo/img/cs.jpg" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h3 class="mb-4">Software Developer / .Net Developer</h3>
+                    <p>
+                        @localizer.GetKey("24 Yaşındayım ve Kütahya'da İkamet Ediyorum. Üniversite Yıllarımdan Beri .Net Alanında Kendimi Geliştiriyorum. Yazılıma Olan İlgim Çok Büyük, Kendime Yenilikler Katmak İçin Elimden Geldiğince Çabalıyorum. Esas Olarak .Net ve Angular Tarafında Projeler Geliştiriyorum. OpenLayers Kütüphanesi Hakkında Temel Bilgim Var. Okulun İnternet Sitesinde 3 Aydır .Net Stajım Var. OdakGİS Firmasında 10 Ay Yazılım Geliştirici Olarak Çalıştım. Ankara, İzmir ve Bursa İlleri İçin İkamet Sorunum Yok.").Value
+                    </p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 py-2"><h6>@localizer.GetKey("Ad Soyad :").Value <span class="text-secondary">@localizer.GetKey("Alparslan Akbaş").Value</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>@localizer.GetKey("Doğum Tarihi :").Value <span class="text-secondary">@localizer.GetKey("3 Ocak 1999").Value</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>@localizer.GetKey("Denklik :").Value <span class="text-secondary">@localizer.GetKey("Meslek Yüksekokulu").Value</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>@localizer.GetKey("Deneyim :").Value <span class="text-secondary">@localizer.GetKey("3 Yıl").Value</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>@localizer.GetKey("Telefon :").Value <span class="text-secondary">@localizer.GetKey("+90 545 293 2911").Value</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>@localizer.GetKey("Mail :").Value <span class="text-secondary">@localizer.GetKey("bybluestht@gmail.com").Value</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>@localizer.GetKey("Adres :").Value <span class="text-secondary">@localizer.GetKey("Domaniç, Kütahya, Türkiye").Value</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>@localizer.GetKey("Durum :").Value <span class="text-secondary">@localizer.GetKey("Serbest").Value</span></h6></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hakkımda Bitişi -->
+    <!-- Eğitim ve Deneyim Başlangıcı -->
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #666666;">@localizer.GetKey("ÖZELLİKLER").Value</h1>
+                <h1 class="position-absolute text-uppercase text-primary">@localizer.GetKey("Eğitim ve Deneyim").Value</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">@localizer.GetKey("Eğitimlerim").Value</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">@localizer.GetKey("Meslek Yüksekokul").Value</h5>
+                            <p class="mb-2"><strong>@localizer.GetKey("Yüksek İhtisas Üniversitesi").Value</strong> | <small>2019 - 2021</small></p>
+                            <p>Lorem Ipsum eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">@localizer.GetKey("Lise").Value</h5>
+                            <p class="mb-2"><strong>@localizer.GetKey("Atatürk Anadolu Lisesi").Value</strong> | <small>2013 - 2017</small></p>
+                            <p>Lorem Ipsum eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">@localizer.GetKey("İlköğretim").Value</h5>
+                            <p class="mb-2"><strong>@localizer.GetKey("Domaniç İlkokulu/Ortaöğretim").Value</strong> | <small>2005 - 2013</small></p>
+                            <p>Lorem Ipsum eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">@localizer.GetKey("Deneyimlerim").Value</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Software Developer</h5>
+                            <p class="mb-2"><strong>OdakGIS</strong> | <small>2022 - 2023</small></p>
+                            <p>@localizer.GetKey("OdakGIS (Kurumsal Kaynak Planlama yazılımı) ve OdakGIS (Web Service Security Gateway) Projelerinde Çalıştım. .Net (Mvc, Core), Angular ve Postgresql Veritabanı Gibi Teknolojileri Kullandım.").Value</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
+                            <p class="mb-2"><strong>Freelancer</strong> | <small>2021 - 2023</small></p>
+                            <p>@localizer.GetKey("2 Yıl Boyunca Freelancer Kazanç Sitelerinden Satışlar Yaptım. E-Ticaret Tasarımları Blog Tasarımları Reklamcılık vb. Genellikle Kullandığım Teknolojiler .Net, Angular, JavaScript.").Value</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">@localizer.GetKey("Stajyer").Value</h5>
+                            <p class="mb-2"><strong>@localizer.GetKey("Yüksek İhtisas Üniversitesi").Value</strong> | <small>2021 - 2021</small></p>
+                            <p>@localizer.GetKey("Öğrenim Gördüğüm Üniversite'de Son Sınıf Ödev Olan Stajımı Geçirdim. Yaptığım İşler ve Öğrenimlerim Genellikle Veritaban ve Web Tarafındaydı. (Aspx ve MsSql)").Value</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Eğitim ve Deneyim Bitişi -->
+    <!-- Yetenekler Başlangıcı -->
+    <div class="container-fluid py-5" id="skill">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #666666;">@localizer.GetKey("Yetenekler").Value</h1>
+                <h1 class="position-absolute text-uppercase text-primary">@localizer.GetKey("Yeteneklerim").Value</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">HTML</h6>
+                            <h6 class="font-weight-bold">95%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">CSS</h6>
+                            <h6 class="font-weight-bold">70%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">.NET</h6>
+                            <h6 class="font-weight-bold">99%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Javascript</h6>
+                            <h6 class="font-weight-bold">70%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Angular JS</h6>
+                            <h6 class="font-weight-bold">99%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Wordpress</h6>
+                            <h6 class="font-weight-bold">85%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">MongoDb</h6>
+                            <h6 class="font-weight-bold">60%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">postgresql</h6>
+                            <h6 class="font-weight-bold">70%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">MsSql</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Yetenekler Bitişi -->
+    <!-- Hizmetler Başlangıcı -->
+    <div class="container-fluid pt-5" id="service">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #666666;">@localizer.GetKey("Hizmetler").Value</h1>
+                <h1 class="position-absolute text-uppercase text-primary">@localizer.GetKey("Hizmetlerim").Value</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">@localizer.GetKey("Web Tasarım").Value</h4>
+                    </div>
+                    <p>@localizer.GetKey("En Güncel Web Tasarım Şablonları İle Web Sitelerinizi Yeniden Tasarlamak veya Kişisel Zevkinize Özel Bir Tasarım Sunabiliyorum.").Value</p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">@localizer.GetKey("Web Kodlama").Value</h4>
+                    </div>
+                    <p>@localizer.GetKey("Okunulabilir Kod Dizaynı İle Clean Codes Presibini Aratmayan, Performans Bazlı Kodlar İle Size Hizmet Etmekteyim.").Value</p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">@localizer.GetKey("SEO").Value</h4>
+                    </div>
+                    <p>@localizer.GetKey("Uzun Zamandır Bireysel ve Kurumsal Firmalar İçin Serbest (freelance) Web Siteleriniz İçin SEO Hizmeti Vermekteyim.").Value</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hizmetler Bitişi -->
+    <!-- Projeler Başlangıcı -->
+    <div class="container-fluid pt-5 pb-3" id="portfolio">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #666666;">@localizer.GetKey("Projeler").Value</h1>
+                <h1 class="position-absolute text-uppercase text-primary">@localizer.GetKey("Projelerim").Value</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <ul class="list-inline mb-4" id="portfolio-flters">
+                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">@localizer.GetKey("Hepsi").Value</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">.Net</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Angular</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row portfolio-container">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded ml-5" style="height:200px; width:200px; position:center" src="~/portfolyo/img/indir.png" alt="">
+                        <div class="overlay d-flex flex-column align-items-center justify-content-center">
+                            <a href="" class="btn btn-outline-dark mt-3 mr-5 disabled">@localizer.GetKey("Detaylar").Value</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded ml-5" style="height:200px; width:200px;" src="~/portfolyo/img/5847ea22cef1014c0b5e4833.png" alt="">
+                        <div class="overlay d-flex justify-content-center align-items-center">
+                            <a href="" class="btn btn-outline-dark mt-3 mr-5 disabled">@localizer.GetKey("Detaylar").Value</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded ml-5" style="height:200px; width:200px;" src="~/portfolyo/img/5847ea22cef1014c0b5e4833.png" alt="">
+                        <div class="overlay d-flex justify-content-center align-items-center">
+                            <a href="" class="btn btn-outline-dark mt-3 mr-5 disabled">@localizer.GetKey("Detaylar").Value</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded ml-5" style="height:200px; width:200px; position:center" src="~/portfolyo/img/indir.png" alt="">
+                        <div class="overlay d-flex flex-column align-items-center justify-content-center">
+                            <a href="" class="btn btn-outline-dark mt-3 mr-5 disabled">@localizer.GetKey("Detaylar").Value</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded ml-5" style="height:200px; width:200px; position:center" src="~/portfolyo/img/indir.png" alt="">
+                        <div class="overlay d-flex flex-column align-items-center justify-content-center">
+                            <a href="" class="btn btn-outline-dark mt-3 mr-5 disabled">@localizer.GetKey("Detaylar").Value</a>
+                        </div>
+                    </div>
+                </div>
+
+                  <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded ml-5" style="height:200px; width:200px; position:center" src="~/portfolyo/img/indir.png" alt="">
+                        <div class="overlay d-flex flex-column align-items-center justify-content-center">
+                            <a href="" class="btn btn-outline-dark mt-3 mr-5 disabled">@localizer.GetKey("Detaylar").Value</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Projeler Bitişi -->
+    <!-- Sözler Başlangıcı -->
+    <div class="container-fluid py-5" id="testimonial">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #666666;">Motive</h1>
+                <h1 class="position-absolute text-uppercase text-primary">@localizer.GetKey("Sözler").Value</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">@localizer.GetKey("'Çalışmaktan; Gayret Sarfından, Bir Cezadan, Bir Sıkıntıdan, Bir Fenalıktan Kaçar Gibi Kaçınmak, Çok Kötü ve Tedbirsizce Bir Harekettir.'").Value</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="~/portfolyo/img/220px-Atatürk,_Trakya_Manevraları_(8).jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">@localizer.GetKey("Mustafa Kemal Atatürk").Value</h5>
+                            <span>@localizer.GetKey("Türkiye Cumhuriyet Kurucusu").Value</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">@localizer.GetKey("'Herhangi Bir Şahsın, Yaşadıkça Memnun ve Mesut Olması İçin Lazım Gelen Şey, Kendisi İçin Değil, Kendisinden Sonra Gelecekler İçin Çalışmaktır. Hayatta Tam Zevk ve Saadet Ancak Gelecek Nesillerin Şerefi, Varlığı, Saadeti İçin Çalışmakta Bulunabilir.'").Value</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="~/portfolyo/img/220px-Atatürk,_Trakya_Manevraları_(8).jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">@localizer.GetKey("Mustafa Kemal Atatürk").Value</h5>
+                            <span>@localizer.GetKey("Türkiye Cumhuriyet Kurucusu").Value</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">@localizer.GetKey("'Yalnız Tek Bir Şeye İhtiyacımız Vardır, Çalışkan Olmak. Servet ve Onun Tabii Neticesi Olan Refah ve Saadet Yalnız ve Ancak Çalışkanların Hakkıdır.'").Value</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="~/portfolyo/img/220px-Atatürk,_Trakya_Manevraları_(8).jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">@localizer.GetKey("Mustafa Kemal Atatürk").Value</h5>
+                            <span>@localizer.GetKey("Türkiye Cumhuriyet Kurucusu").Value</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">@localizer.GetKey("'Saygı İstiyorsanız, Önce Kendinize Saygı Göstereceksiniz. Herkesten Üstün Değiliz Ama Kimseden de Aşağı Değiliz. Kendimizle İftihar Edelim Ki Başkası da Bize Saygı Göstersin.'").Value</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="~/portfolyo/img/s-6085f15767d652e39af20272ed36cbc432504c0d.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Aziz Sancar</h5>
+                            <span>@localizer.GetKey("Profesör Doktor").Value</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">@localizer.GetKey("'Çoğu İnsan Zekâya İnanır, Ben İnanmıyorum Bizi Birbirimizden Ayıran Emektir, Ben Çalışmaya İnanıyorum.'").Value</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="~/portfolyo/img/s-6085f15767d652e39af20272ed36cbc432504c0d.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Aziz Sancar</h5>
+                            <span>@localizer.GetKey("Profesör Doktor").Value</span>
+                        </div>
+                          <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">@localizer.GetKey("'Başarılı Olmak Nobel Almak Değil, Ailenize, Ülkenize ve İnsanlığa Hizmet Etmektir.'").Value</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="~/portfolyo/img/s-6085f15767d652e39af20272ed36cbc432504c0d.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Aziz Sancar</h5>
+                            <span>@localizer.GetKey("Profesör Doktor").Value</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">@localizer.GetKey("'Devler Gibi Eserler Bırakmak İçin, Karıncalar Gibi Çalışmak Gerekir.'").Value</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="~/portfolyo/img/necip-fazil-kisakurek-kitaplari.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">@localizer.GetKey("Necip Fazıl Kısakürek").Value</h5>
+                            <span>@localizer.GetKey("Şair").Value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sözler Bitişi -->
+    <!-- İletişim Başlangıcı -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #666666;">@localizer.GetKey("İletişim").Value</h1>
+                <h1 class="position-absolute text-uppercase text-primary">@localizer.GetKey("İletişime Geç").Value</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form text-center">
+                        <div id="success"></div>
+                        <form asp-controller="Hakkımda" asp-action="SendMail" method="post" id="contactForm">
+                            <div class="form-row">
+                                <div class="control-group col-sm-6">
+                                    <input type="text" name="name" class="form-control p-4" id="name" placeholder="@localizer.GetKey("Adınız").Value"
+                                           required/>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group col-sm-6">
+                                    <input type="email" name="email" class="form-control p-4" id="email" placeholder="@localizer.GetKey("Mail Adresiniz").Value"
+                                           required/>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" name="subject" class="form-control p-4" id="subject" placeholder="@localizer.GetKey("Konu").Value"
+                                       required/>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control py-3 px-4" name="message" rows="5" id="message" placeholder="@localizer.GetKey("Mesajınız").Value" required></textarea>         
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">@localizer.GetKey("Mesaj Gönder").Value</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- İletişim Bitişi -->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-info text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="https://twitter.com/ProfDrAlparslan"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/legolastht/"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/alparslanakbas/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.instagram.com/legolas.trr/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="m-0">
+                &copy; <a class="text-white font-weight-bold" href="https://alparslanakbas.org.tr/">Alparslan Akbaş</a>. Bütün Hakları Saklıdır. Tasarım <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a> Tarafından Alıntılanmıştır.
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="~/portfolyo/lib/typed/typed.min.js"></script>
+    <script src="~/portfolyo/lib/easing/easing.min.js"></script>
+    <script src="~/portfolyo/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/portfolyo/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/portfolyo/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/portfolyo/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <!-- Contact Javascript File -->
+    <script src="~/portfolyo/mail/jqBootstrapValidation.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="~/portfolyo/js/main.js"></script>
+</body>
+</html>
+
+@await Component.InvokeAsync("NToastNotify")
+
+<!--Cv İndirme-->
+<script>
+    function downloadCv() {
+        var link = document.createElement('a');
+        link.href = '@Url.Action("DownloadCv", "Hakkımda")';
+        link.download = 'Özgeçmiş.pdf';
+        link.target = '_blank'; // İsteğe bağlı olarak yeni bir sekmede açmak için
+        link.click();
+    }
+</script>
