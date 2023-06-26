@@ -30,9 +30,6 @@ namespace Business.Authentication
             if (user == null)
                 return new ErrorDataResult<Token>("Kullanıcı maili sistemde bulunamadı!");
 
-            //if (!user.IsConfirm)
-            //    return new ErrorDataResult<Token>("Kullanıcı maili onaylanmamış!");
-
             var result = HashingHelper.VerifyPasswordHash(loginDto.Password, user.PasswordHash, user.PasswordSalt);
             List<OperationClaim> operationClaims = await _userService.GetUserOperationClaims(user.Id);
 

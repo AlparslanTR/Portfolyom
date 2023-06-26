@@ -1,16 +1,20 @@
-﻿using Autofac;
+using Autofac;
 using Autofac.Extras.DynamicProxy;
 using Business.Abstract;
 using Business.Authentication;
-using Business.Repositories.EmailParameterRepository;
 using Business.Repositories.OperationClaimRepository;
 using Business.Repositories.UserOperationClaimRepository;
 using Business.Repositories.UserRepository;
 using Core.Utilities.Interceptors;
 using Core.Utilities.Security.JWT;
-using DataAccess.Repositories.EmailParameterRepository;
 using DataAccess.Repositories.OperationClaimRepository;
 using DataAccess.Repositories.UserOperationClaimRepository;
+using Business.Repositories.ProjectRepository;
+using DataAccess.Repositories.ProjectRepository;
+using Business.Repositories.BlogRepository;
+using DataAccess.Repositories.BlogRepository;
+using Business.Repositories.CategoryRepository;
+using DataAccess.Repositories.CategoryRepository;
 using DataAccess.Repositories.UserRepository;
 
 namespace Business.DependencyResolvers.Autofac
@@ -28,12 +32,18 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<UserOperationClaimManager>().As<IUserOperationClaimService>();
             builder.RegisterType<EfUserOperationClaimDal>().As<IUserOperationClaimDal>();
 
-            builder.RegisterType<EmailParameterManager>().As<IEmailParameterService>();
-            builder.RegisterType<EfEmailParameterDal>().As<IEmailParameterDal>();
-
             builder.RegisterType<AuthManager>().As<IAuthService>();
 
             builder.RegisterType<TokenHandler>().As<ITokenHandler>();
+
+            builder.RegisterType<ProjectManager>().As<IProjectService>().SingleInstance();
+            builder.RegisterType<EfProjectDal>().As<IProjectDal>().SingleInstance();
+
+            builder.RegisterType<BlogManager>().As<IBlogService>().SingleInstance();
+            builder.RegisterType<EfBlogDal>().As<IBlogDal>().SingleInstance();
+
+            builder.RegisterType<CategoryManager>().As<ICategoryService>().SingleInstance();
+            builder.RegisterType<EfCategoryDal>().As<ICategoryDal>().SingleInstance();
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
