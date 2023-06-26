@@ -1,0 +1,49 @@
+﻿@{
+    var currentCulture = CultureInfo.CurrentCulture.Name;
+}
+<nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+    <a asp-route="Hakkında" class="navbar-brand ml-lg-3">
+        <h1 class="m-0 display-5"><span class="text-primary">Alparslan</span> Akbaş</h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+        <div class="navbar-nav m-auto py-0">
+            <a href="#home" class="nav-item nav-link text-danger active">@localizer.GetKey("Anasayfa").Value</a>
+            <a href="#about" class="nav-item nav-link text-danger">@localizer.GetKey("Hakkımda").Value</a>
+            <a href="#qualification" class="nav-item nav-link text-danger">@localizer.GetKey("Eğitim ve Deneyim").Value</a>
+            <a href="#skill" class="nav-item nav-link text-danger">@localizer.GetKey("Yetenekler").Value</a>
+            <a href="#service" class="nav-item nav-link text-danger">@localizer.GetKey("Hizmetler").Value</a>
+            <a href="#portfolio" class="nav-item nav-link text-danger">@localizer.GetKey("Projelerim").Value</a>
+            <a href="#testimonial" class="nav-item nav-link text-danger">@localizer.GetKey("Sözler").Value</a>
+            <a href="#contact" class="nav-item nav-link text-danger">@localizer.GetKey("İletişim").Value</a>
+        </div>
+        <a href="#contact" class="btn btn-outline-primary d-none d-lg-block">@localizer.GetKey("İletişime Geç").Value</a>
+        <button class="btn btn-outline-info dropdown-toggle ml-3" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            @if (currentCulture == "tr-TR")
+            {
+                <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/imgbin_flag-of-turkey-flag-of-the-republic-of-china-national-flag-png.png" alt="Türkçe">
+            }
+            else if (currentCulture == "en-US")
+            {
+                <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/imgbin_flag-of-england-flag-of-the-united-kingdom-english-flag-of-great-britain-png.png" alt="English">
+            }
+            else
+            {
+                <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/default-flag.png" alt="Language">
+            }
+        </button>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
+            <a asp-controller="Hakkımda" asp-action="Lang" class="dropdown-item" asp-route-languageCode="tr-TR">
+                <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/imgbin_flag-of-turkey-flag-of-the-republic-of-china-national-flag-png.png" alt="Türkçe"> Türkçe
+            </a>
+            <a asp-controller="Hakkımda" asp-action="Lang" class="dropdown-item" asp-route-languageCode="en-US">
+                <img style="height:30px; width:30px; object-fit: cover;" src="~/portfolyo/img/imgbin_flag-of-england-flag-of-the-united-kingdom-english-flag-of-great-britain-png.png" alt="English"> English
+            </a>
+        </div>
+
+    </div>
+
+</nav>

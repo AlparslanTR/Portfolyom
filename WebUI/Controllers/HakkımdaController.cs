@@ -65,9 +65,68 @@ namespace WebUI.Controllers
         // Yukarı da ki işlemler cv indirmek ve mail göndermek amaçlıdır.
         // Alttaki işlemler Hakkımda sayfasının partial yöntemi ile performans amaçlı bölünmesidir.
 
-        //public PartialViewResult Hakkimda()
-        //{
-        //    return PartialView();
-        //}
+        // <!-- Navbar Başlangıcı -->
+        public PartialViewResult Navbar()
+        {
+            return PartialView();
+        }
+        // <!-- Navbar Bitişi -->
+
+        // <!-- Header Başlangıcı -->
+        public PartialViewResult Header()
+        {
+            return PartialView();
+        }
+        // <!-- Header Bitişi -->
+
+        // <!-- Hakkımda Başlangıcı -->
+        public PartialViewResult Hakkımda()
+        {
+            return PartialView();
+        }
+        // <!-- Hakkımda Bitişi -->
+
+        // <!-- Eğitim Başlangıcı -->
+        public PartialViewResult Eğitim()
+        {
+            return PartialView();
+        }
+        // <!-- Eğitim Bitişi -->
+
+        // <!-- Yetenek Başlangıcı -->
+        public PartialViewResult Yetenek()
+        {
+            return PartialView();
+        }
+        // <!-- Yetenek Bitişi -->
+
+        // <!-- Hizmet Başlangıcı -->
+        public PartialViewResult Hizmet()
+        {
+            return PartialView();
+        }
+        // <!-- Hizmet Bitişi -->
+
+        // <!-- Proje Başlangıcı -->
+        public PartialViewResult Proje()
+        {
+            return PartialView();
+        }
+        // <!-- Proje Bitişi -->
+
+        // <!-- Sözler Başlangıcı -->
+        public PartialViewResult Sözler()
+        {
+            return PartialView();
+        }
+        // <!-- Sözler Bitişi -->
+
+        // <!-- İletişim Başlangıcı -->
+        public PartialViewResult İletişim()
+        {
+            return PartialView();
+        }
+        // <!-- İletişim Bitişi -->
+
     }
 }

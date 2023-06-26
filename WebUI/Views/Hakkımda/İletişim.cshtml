@@ -1,0 +1,41 @@
+﻿<div class="container-fluid py-5" id="contact">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #666666;">@localizer.GetKey("İletişim").Value</h1>
+            <h1 class="position-absolute text-uppercase text-primary">@localizer.GetKey("İletişime Geç").Value</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form text-center">
+                    <div id="success"></div>
+                    <form asp-controller="Hakkımda" asp-action="SendMail" method="post" id="contactForm">
+                        <div class="form-row">
+                            <div class="control-group col-sm-6">
+                                <input type="text" name="name" class="form-control p-4" id="name" placeholder="@localizer.GetKey("Adınız").Value"
+                                       required />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group col-sm-6">
+                                <input type="email" name="email" class="form-control p-4" id="email" placeholder="@localizer.GetKey("Mail Adresiniz").Value"
+                                       required />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" name="subject" class="form-control p-4" id="subject" placeholder="@localizer.GetKey("Konu").Value"
+                                   required />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control py-3 px-4" name="message" rows="5" id="message" placeholder="@localizer.GetKey("Mesajınız").Value" required></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">@localizer.GetKey("Mesaj Gönder").Value</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
