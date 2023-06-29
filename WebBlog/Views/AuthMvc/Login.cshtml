@@ -25,7 +25,8 @@
     <div class="middle-box text-center loginscreen animated fadeInDown">
         <div style="margin-top:200px;">
             <p><strong>Projelerim ve Bloglarıma Giriş Sistemi</strong></p>
-            <form class="m-t" asp-controller="Auth" asp-action="Login" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <form class="m-t" asp-controller="AuthMvc" asp-action="Login" asp-for-validation="" method="post">
                 <div class="form-group">
                     <input type="email" asp-for="Email" class="form-control" placeholder="Mail Adresi" required="">
                 </div>
@@ -33,6 +34,10 @@
                     <input type="password" asp-for="Password" class="form-control" placeholder="Şifre" required="">
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">Giriş</button>
+                @if (!string.IsNullOrEmpty(ViewBag.Hata))
+                {
+                    <div class="alert alert-warning">@ViewBag.Hata</div>
+                }
             </form>
             <p class="m-t"> <small href="https://alparslanakbas.org.tr">Alparslan Akbaş Production</small> </p>
         </div>
