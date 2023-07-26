@@ -1,0 +1,32 @@
+﻿<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <img alt="image" class="rounded-circle" src="~/Images/adminImage.jpg" />
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="block m-t-xs font-bold">@User.Identity.Name</span>
+                        <span class="text-muted text-xs block">.Net Developer<b class="caret"></b></span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a class="dropdown-item" href="profile.html">Profil</a></li>
+                        <li><a class="dropdown-item" href="contacts.html">İletişim</a></li>
+                        <li><a class="dropdown-item" href="mailbox.html">Mail Kutusu</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html">Çıkış</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+            </li>
+            <li>
+                <a asp-route="Admin/Home/Anasayfa"><i class="fa fa-th-large"></i> <span class="nav-label">Admin Paneli</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a asp-area="Admin" asp-controller="Account" asp-action="SignUp"><i class="fa fa-user-o"></i>Yeni Kayıt Ekle</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</nav>

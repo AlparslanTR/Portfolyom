@@ -50,22 +50,6 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
 });
 
-builder.Services.Configure<RequestLocalizationOptions>(options =>
-{
-    var supportCultures = new List<CultureInfo>
-    {
-        new CultureInfo("tr-TR"),
-        new CultureInfo("en-US"),
-        new CultureInfo("fr-FR"),
-        new CultureInfo("de-DE")
-        
-    };
-    options.DefaultRequestCulture = new RequestCulture(culture: "tr-TR", uiCulture: "tr-TR");
-    options.SupportedCultures = supportCultures;
-    options.SupportedUICultures = supportCultures;
-    options.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
-});
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
