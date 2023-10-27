@@ -46,7 +46,7 @@ namespace WebUI.Controllers
 
         public IActionResult DownloadCv()
         {
-            var cvPath = "wwwroot/Cv/Özgeçmiş.pdf";
+            var cvPath = "wwwroot/Cv/AlparslanAkbasCv.pdf";
             var fileBytes = System.IO.File.ReadAllBytes(cvPath);
             var fileName = Path.GetFileName(cvPath);
             var contentType = "application/pdf";
