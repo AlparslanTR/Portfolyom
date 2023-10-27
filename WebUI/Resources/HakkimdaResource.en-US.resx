@@ -144,9 +144,6 @@
   <data name="2 Yıl Boyunca Freelancer Kazanç Sitelerinden Satışlar Yaptım. E-Ticaret Tasarımları Blog Tasarımları Reklamcılık vb. Genellikle Kullandığım Teknolojiler .Net, Angular, JavaScript." xml:space="preserve">
     <value>I have Been Making Sales from Freelancer Earnings Sites for 2 Years. E-Commerce Designs Blog Designs Advertising etc. The Technologies I Usually Use are .NET, Angular, JavaScript.</value>
   </data>
-  <data name="24 Yaşındayım ve Kütahya'da İkamet Ediyorum. Üniversite Yıllarımdan Beri .Net Alanında Kendimi Geliştiriyorum. Yazılıma Olan İlgim Çok Büyük, Kendime Yenilikler Katmak İçin Elimden Geldiğince Çabalıyorum. Esas Olarak .Net ve Angular Tarafında Projeler Geliştiriyorum. OpenLayers Kütüphanesi Hakkında Temel Bilgim Var. Okulun İnternet Sitesinde 3 Aydır .Net Stajım Var. OdakGİS Firmasında 10 Ay Yazılım Geliştirici Olarak Çalıştım. Ankara, İzmir ve Bursa İlleri İçin İkamet Sorunum Yok." xml:space="preserve">
-    <value>I am 24 Years Old and Reside in Kütahya. I have Been Developing Myself in the Field of .NET Since My College Years. My Interest in Software Is Very Great, I Try As Hard As I Can to Add Innovations to Myself. I Mainly Develop Projects on the .NET and Angular Side. I Have Basic Knowledge About the OpenLayers Library. I Have a .NET Internship on the School's Website for 3 Months. I Worked as a Software Developer at OdakGİS Company for 10 Months. I have No Residence Problems For the Provinces of Ankara, Izmir and Bursa.</value>
-  </data>
   <data name="3 Ocak 1999" xml:space="preserve">
     <value>3 January 1999</value>
   </data>
@@ -302,6 +299,23 @@
   </data>
   <data name="Web Tasarım" xml:space="preserve">
     <value>Web Design</value>
+  </data>
+  <data name="Yazılım kariyerime başlamadan önce, lise yıllarımda çeşitli platformlarda web sitesi hackleme projeleri üzerinde çalışıyordum. Lisenin son yıllarında Java ile tanıştım, ancak o dönemde daha fazla Türkçe kaynak C# için mevcuttu. Bu nedenle kariyerime C# ile başladım. Üniversitede bilgisayar mühendisliği okumak istedim, ancak iki kez denememe rağmen başarılı olamadım, bu yüzden bilgisayar programcılığı alanında mezun oldum. Mezun olduktan sonra 2 yıl boyunca C# ve .Net üzerinde çalışarak kendimi geliştirdim. Ağustos 2022'den Ocak 2023'e kadar, 6 ay boyunca Ankara'daki OdakGIS şirketinde yazılım geliştirici olarak çalıştım. Şu an serbest çalışan olarak projeler satıyorum, ancak asıl hedefim kendimi geliştirebileceğim ve deneyim kazanabileceğim şirketlerle çalışmaktır. Ankara, İzmir ve Bursa gibi yerlerde işyerinde çalışabilirim, ancak genel tercihim uzaktan çalışmadır. İş tekliflerinizi bekliyorum." xml:space="preserve">
+    <value>Before I started my software career, during my high school
+years, I worked on web hacking projects on various platforms.
+In the later years of high school, I got introduced to Java, but
+at that time, there were more Turkish resources available for
+C#. Therefore, I started my career in C#. I wanted to study
+computer engineering at university, tried twice but didn't
+succeed, so I graduated in the field of computer
+programming. After graduating, I spent two years working on
+C# and .Net, improving myself. From August 2022 to January
+2023, I worked as a software developer at OdakGIS in Ankara
+for six months. Currently, I'm selling projects as a freelancer,
+but my main goal is to work with companies where I can
+improve myself and gain experience. I can work in Ankara,
+Izmir, and Bursa, but my preference is remote work. I'm
+looking forward to job offers.</value>
   </data>
   <data name="Yetenekler" xml:space="preserve">
     <value>Skills</value>
